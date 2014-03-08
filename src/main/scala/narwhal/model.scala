@@ -5,15 +5,15 @@ sealed trait Model
 sealed trait Query[A]
 sealed trait Resource extends Any
 
-class NodeId(val self: String)
+case class NodeId(val self: String)
   extends AnyVal
   with Id[Node]
   with Resource
 
-class Agent(val self: String)
+case class Agent(val self: String)
   extends AnyVal
 
-class AliasId(val self: String)
+case class AliasId(val self: String)
   extends AnyVal
   with Id[Alias]
   with Resource
@@ -25,7 +25,7 @@ case class Node
 
 case class Alias
   ( id: AliasId
-  , nodeId: NodeId
+  , node: NodeId
   ) extends Model
 
 case class Link

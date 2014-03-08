@@ -9,6 +9,7 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 libraryDependencies ++= Seq(
   "com.typesafe.akka"   %%  "akka-actor"    % "2.1.4",
   "com.typesafe.akka"   %%  "akka-testkit"  % "2.1.4",
+  "com.typesafe.slick" %% "slick" % "2.0.0",
   "org.specs2"          %%  "specs2"        % "2.2.3" % "test"
 )
 
